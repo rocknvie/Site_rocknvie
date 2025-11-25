@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /js/
+Disallow: /styles/
+Disallow: /plugins/
+Allow: /
+
+Sitemap: https://www.rocknvie.fr/sitemap.xml
