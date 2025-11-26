@@ -582,24 +582,29 @@ content: "";
 
 @font-face {
     font-family: 'doctorpunk';
-    src: url('../fonts/doctor punk.otf');
+    src: url('../fonts/doctor-punk.otf') format('opentype');
+	font-display: block;
 }
 
 @font-face {
     font-family: 'retroRockPoster';
-    src: url('../fonts/retroRockPoster.ttf');
+    src: url('../fonts/retroRockPoster.ttf') format('truetype');
+	font-display: block;
 }
 @font-face {
     font-family: 'Rockabye';
-    src: url('../fonts/Rockabye-Regular.otf');
+    src: url('../fonts/Rockabye-Regular.otf') format('opentype');
+	font-display: block;
 }
 @font-face {
     font-family: 'rocknroll_typo_crazy';
-    src: url('../fonts/rocknroll_typo_crazy.ttf');
+    src: url('../fonts/rocknroll_typo_crazy.ttf') format('truetype');
+	font-display: block;
 }
 @font-face {
     font-family: 'RockSalt';
-    src: url('../fonts/RockSalt.ttf');
+    src: url('../fonts/RockSalt.ttf') format('truetype');
+	font-display: block;
 }
 /* --- sponsors --- */
 .sponsors-marquee {
