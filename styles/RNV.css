@@ -706,3 +706,30 @@ content: "";
   padding-top: 10px;
 }
 
+@media (max-width: 767.98px) {
+  .milestone {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .milestone_icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+    font-size: 2.5rem; /* réduire légèrement */
+  }
+
+  .milestone_counter.horaire {
+    font-size: 1.5rem; /* réduire la taille sur mobile */
+  }
+
+  .milestone_text {
+    font-size: 1rem;
+  }
+    .iconeTemps {
+    font-size: 100%;
+  } 
+  .milestone_content {
+    padding-bottom : 15px;
+  }
+}
