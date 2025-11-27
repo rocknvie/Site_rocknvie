@@ -673,4 +673,11 @@ content: "";
 .nopaddingtop {
   padding-top: 10px;
 }
-
+@media (max-width: 768px) {
+    .homeimage {
+        background-size: cover !important;
+        background-position: center !important;
+        min-height: 60vh; /* ou à ajuster */
+        height: auto; 
+    }
+}
