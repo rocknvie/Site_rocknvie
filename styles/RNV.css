@@ -349,6 +349,10 @@ background-size: CONTAIN;
     display: block;
 }
 
+.homeindex {
+    height: 100%;
+}
+
 .homeimage img {
     width: 100%;
     height: auto;          /* garde le ratio */
