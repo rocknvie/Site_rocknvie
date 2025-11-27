@@ -345,19 +345,30 @@ background-size: CONTAIN;
 /* --- Image accueil plein écran responsive --- */
 .homeimage {
     width: 100%;
-    max-width: 100%;
-    height: auto;          /* hauteur automatique pour garder le ratio */
+    height: auto;          /* hauteur automatique par défaut */
     display: block;
-    margin: 0 auto;
-    object-fit: contain;    /* tout l'image visible sans rognage */
 }
 
-/* Mobile éventuel (optionnel si tu veux réduire hauteur) */
+.homeimage img {
+    width: 100%;
+    height: auto;          /* garde le ratio */
+    object-fit: contain;   /* tout l'image visible */
+    display: block;
+}
+
+//* Mobile */
 @media (max-width: 768px) {
     .homeimage {
-        height: 70vh;          /* ou 60vh si tu veux moins de hauteur sur mobile */
+        height: 70vh;     /* hauteur max du conteneur */
+    }
+
+    .homeimage img {
+        width: 100%;
+        height: 100%;     /* prend toute la hauteur du conteneur */
+        object-fit: contain;
     }
 }
+
 .chateau{
 background-image:url(../images/chateau.webp);	
 }	
