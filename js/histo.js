@@ -111,37 +111,37 @@ document.addEventListener("DOMContentLoaded", () => {
   fadeElems.forEach(el => fadeObserver.observe(el));
 
   // --- Comportement mobile : activer uniquement le slideshow du groupe centré ---
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    // On veut déclencher quand une grande partie du groupe est centrée.
-    // rootMargin peut être ajusté si tu veux une zone encore plus centrée.
-    const mobileObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const group = entry.target;
-        const ctrl = controls.get(group);
-        if (!ctrl) return;
+ if (window.matchMedia("(max-width: 768px)").matches) {
 
-        // Si la portion visible dépasse le threshold -> on démarre
-        // Ici on choisit d'activer quand au moins 60% du bloc est visible.
-        if (entry.intersectionRatio >= 0.6) {
-          // stoppe les autres avant de lancer celui-ci
-          controls.forEach((c, g) => {
-            if (g !== group) c.stop();
-          });
-          ctrl.start();
-        } else {
-          // si il redevient en dehors, on stoppe
-          ctrl.stop();
-        }
-      });
-    }, {
-      root: null,
-      threshold: [0, 0.25, 0.5, 0.6, 0.75, 1],
-      // Optionnel : recentrer la fenêtre d'intersection vers le milieu de l'écran.
-      // tu peux jouer sur rootMargin si tu veux être strictement 'au centre'
-      rootMargin: "0px 0px -10% 0px"
+  const mobileObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const group = entry.target;
+      const ctrl = controls.get(group);
+      if (!ctrl) return;
+
+      // Si le groupe est suffisamment visible pour être "le" groupe affiché
+      if (entry.intersectionRatio >= 0.2) {
+
+        // Stoppe tous les autres groupes
+        controls.forEach((c, g) => {
+          if (g !== group) c.stop();
+        });
+
+        // Lance immédiatement celui-ci
+        ctrl.start();
+
+      } else {
+        // Sinon il doit s'arrêter
+        ctrl.stop();
+      }
     });
+  }, {
+    root: null,
+    threshold: [0, 0.1, 0.2, 0.3, 0.5, 1],
+  });
 
-    groups.forEach(g => mobileObserver.observe(g));
-  }
+  groups.forEach(g => mobileObserver.observe(g));
+}
+
 
 });
