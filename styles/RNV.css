@@ -818,6 +818,7 @@ font-size: 3rem;
       height: 300px;         /* augmente la hauteur visible de l'image */
       object-fit: cover;     /* évite les déformations */
   }
-  
-  
+  .bandeauraya {
+   background-image: url("../images/groupes/La_Raya_Des_Agites/bandeauRayaMobile.webp") !important;
+   }
 }
