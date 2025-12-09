@@ -819,23 +819,5 @@ font-size: 3rem;
       object-fit: cover;     /* évite les déformations */
   }
   
- /* on enlève le plugin parallax */
-    .parallax-window.imageraya {
-        background-image: url("../images/groupes/La_Raya_Des_Agites/bandeauRayaMobile.webp") !important;
-        background-size: cover !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-
-        /* le parallax.js applique transform → on le neutralise */
-        transform: none !important;
-
-        /* on force une vraie hauteur mobile */
-        height: 100vh !important;
-    }
-
-    /* le plugin parallax masque l'image → on l'empêche */
-    .parallax-window.imageraya img {
-        display: none !important;
-    }
   
 }
