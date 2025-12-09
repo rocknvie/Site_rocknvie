@@ -833,4 +833,7 @@ font-size: 3rem;
    .single {
     padding-bottom: 20px;
 }
+   .video {
+    padding-bottom: 0px;
+}
 }
