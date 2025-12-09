@@ -756,6 +756,13 @@ content: "";
         position: relative;
         top: 60px;  /* décale en bas */
 }
+.titresingle {
+        white-space: normal;
+}
+.home_content.titresingle {
+        position: relative;
+        top: 60px;  /* décale en bas */
+}
 
 .single_content_col	{
         margin-top: 10px;
