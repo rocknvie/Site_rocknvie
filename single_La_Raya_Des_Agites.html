@@ -222,5 +222,18 @@
 <script src="plugins/fit-vids/jquery.fitvids.js"></script>
 <script src="js/single.js"></script>
 <script src="js/RNVInitStructure.js"></script>
+<script>
+function setVhMobile() {
+    if (window.innerWidth <= 768) {  // seulement pour mobile/tablettes
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    } else {
+        document.documentElement.style.setProperty('--vh', null); // reset
+    }
+}
+
+window.addEventListener('resize', setVhMobile);
+window.addEventListener('load', setVhMobile);
+<script>
 </body>
 </html>
