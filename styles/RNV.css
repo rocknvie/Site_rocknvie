@@ -822,24 +822,18 @@ font-size: 3rem;
       object-fit: cover;     /* évite les déformations */
   }
   
-    .imagerayaDesktop {
+ .imagerayaDesktop {
         display: none !important;
     }
 
     .imagerayaMobile {
-        display: block !important;
-        position: relative;
-        width: 100%;
-        height: calc(var(--vh, 1vh) * 100); /* prend toute la hauteur visible */
-        overflow: hidden;
-    }
-
-    .imagerayaMobile img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top center;
         display: block;
+        width: 100%;
+        height: 100vh; /* prend toute la hauteur de l'écran */
+        background-image: url('../images/groupes/La_Raya_Des_Agites/bandeauRayaMobile.webp');
+        background-size: cover;      /* l'image couvre tout le div */
+        background-position: center; /* centrage */
+        background-repeat: no-repeat;
     }
   
 }

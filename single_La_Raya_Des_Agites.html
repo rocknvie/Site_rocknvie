@@ -119,9 +119,7 @@
 		<div class="home_inner">
 
 			<div class="parallax_background parallax-window imagerayaDesktop" data-parallax="scroll" data-image-src="images/groupes/La_Raya_Des_Agites/bandeauRaya.webp" data-speed="0.8"></div>
-			<div class="imagerayaMobile">
-				<img src="images/groupes/La_Raya_Des_Agites/bandeauRayaMobile.webp" alt="La Raya Des Agites" loading="lazy" />
-			</div>
+			<div class="imagerayaMobile"></div>
 			<div class="home_container">
 				<div class="home_content text-center titresingle">
 					<div class="home_title doctorpunk titresingle"><div>La raya</div> des agités</div>
@@ -222,18 +220,5 @@
 <script src="plugins/fit-vids/jquery.fitvids.js"></script>
 <script src="js/single.js"></script>
 <script src="js/RNVInitStructure.js"></script>
-<script>
-function setVhMobile() {
-    if (window.innerWidth <= 768) {  // seulement pour mobile/tablettes
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    } else {
-        document.documentElement.style.setProperty('--vh', null); // reset
-    }
-}
-
-window.addEventListener('resize', setVhMobile);
-window.addEventListener('load', setVhMobile);
-<script>
 </body>
 </html>
