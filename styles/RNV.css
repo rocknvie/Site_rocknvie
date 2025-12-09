@@ -824,4 +824,7 @@ font-size: 3rem;
    .bandeausons {
    background-image: url("../images/groupes/sons_of_oflaherty/bandeauSonsMobile.webp") !important;
    }
+   .colsingle{
+    margin-bottom: 20px;
+   }
 }
