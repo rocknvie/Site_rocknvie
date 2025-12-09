@@ -820,5 +820,8 @@ font-size: 3rem;
   }
   .bandeauraya {
    background-image: url("../images/groupes/La_Raya_Des_Agites/bandeauRayaMobile.webp") !important;
+   } 
+   .bandeausons {
+   background-image: url("../images/groupes/sons_of_oflaherty/bandeauSonsMobile.webp") !important;
    }
 }
