@@ -830,4 +830,7 @@ font-size: 3rem;
    .listsingle{
     margin-bottom: 20px;
    }
+   .single {
+    padding-bottom: 0px;
+}
 }
