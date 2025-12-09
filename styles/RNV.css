@@ -336,12 +336,7 @@ font-size:600%;
      border: none;
      background: none;
 }
-/*
-.homeimage{
-background-image:url(../images/home.webp);
-background-size: CONTAIN;	
-}
-*/
+
 /* --- Image accueil plein écran responsive --- */
 .homeimage {
     width: 100%;
@@ -551,7 +546,7 @@ content: "";
   transform: translateY(0);
 }
 
-/* Responsive mobile */
+/* Responsive mobile-------------------------------------------------------------- */
 @media screen and (max-width: 700px) {
   .group {
     width: 100%;
@@ -823,5 +818,15 @@ font-size: 3rem;
   .group .slideshow .slide {
       height: 300px;         /* augmente la hauteur visible de l'image */
       object-fit: cover;     /* évite les déformations */
-  }  
+  }
+.page-raya .parallax_background {
+        background-position: center 20% !important; 
+        /* remonte la zone visible → moins de crop du sujet */
+
+        height: 180px !important; 
+        /* réduit la hauteur → réduit le zoom → montre plus de l'image */
+
+        background-size: cover !important;  
+        /* on garde la logique responsive originale */
+    }
 }
