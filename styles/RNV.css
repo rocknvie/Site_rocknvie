@@ -704,6 +704,9 @@ content: "";
     width: 640px;
     height: 480px;
   }
+  .listsinglemargin {
+	  margin-bottom:50px;
+  }
 /*--------------RESPONSIVE--------------*/  
 @media (max-width: 767.98px) {
   .milestone {
@@ -836,4 +839,7 @@ font-size: 3rem;
    .video {
     padding-bottom: 0px;
 }
+  .listsinglemargin {
+	  margin-bottom:0px;
+  }
 }
