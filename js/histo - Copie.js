@@ -1,5 +1,3 @@
-const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
 document.addEventListener("DOMContentLoaded", () => {
   const groups = document.querySelectorAll(".group");
 
@@ -83,8 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       group.classList.remove("slideshow-running");
     }
 
-    if (!isMobile) {
-	// comportements desktop (hover)
+    // comportements desktop (hover)
     group.addEventListener("mouseenter", start);
     group.addEventListener("mouseleave", stop);
 
@@ -98,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // petit délai pour laisser l'utilisateur voir la 1re image
       setTimeout(stop, 300);
     });
-	}
+
     // expose contrôles pour l'observer mobile
     controls.set(group, { start, stop });
   });
