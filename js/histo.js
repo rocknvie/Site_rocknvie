@@ -99,43 +99,34 @@ document.addEventListener("DOMContentLoaded", () => {
   fadeElems.forEach(el => fadeObserver.observe(el));
 
   // --- Nouveau comportement mobile : déclenchement quand ENTIEREMENT visible ---
-  if (isMobile) {
-    const viewportHeight = window.innerHeight;
-
-    function checkFullyVisibleGroups() {
-      let activeGroup = null;
-
-      groups.forEach(group => {
-        const rect = group.getBoundingClientRect();
-        const fullyVisible =
-          rect.top >= 0 &&
-          rect.bottom <= viewportHeight;
-
-        const ctrl = controls.get(group);
-        if (!ctrl) return;
-
-        if (fullyVisible) {
-          activeGroup = group;
-        }
-      });
-
-      if (activeGroup) {
-        controls.forEach((c, g) => {
-          if (g === activeGroup) c.start();
-          else c.stop();
-        });
-      }
-    }
-
-    // Observer utilisé uniquement comme déclencheur
-    const mobileObserver = new IntersectionObserver(() => {
-      checkFullyVisibleGroups();
-    }, { threshold: [0, 1] });
-
-    groups.forEach(g => mobileObserver.observe(g));
-
-    // Vérification initiale
+if (isMobile) {
+  const mobileObserver = new IntersectionObserver(() => {
     checkFullyVisibleGroups();
+  }, { threshold: 1.0 });
+
+  groups.forEach(g => mobileObserver.observe(g));
+
+  window.addEventListener('resize', () => {
+    // re-vérifier au changement d'orientation / UI mobile
+    checkFullyVisibleGroups();
+  });
+
+  function checkFullyVisibleGroups() {
+    const viewportHeight = window.innerHeight;
+    groups.forEach(group => {
+      const rect = group.getBoundingClientRect();
+      // tolérance 5 px en bas (ajustable)
+      const fullyVisible = rect.top >= 0 && (rect.bottom <= viewportHeight + 5);
+      const ctrl = controls.get(group);
+      if (!ctrl) return;
+      if (fullyVisible) ctrl.start();
+      else ctrl.stop();
+    });
   }
+
+  // appel initial
+  checkFullyVisibleGroups();
+}
+
 
 });
