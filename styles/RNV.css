@@ -546,21 +546,21 @@ content: "";
   transform: translateY(0);
 }
 .timeline .group {
-    max-width: calc(50% - 60px);
+    max-width: calc(50% - 80px);
     width: 100%;
 }
 .timeline .group {
-    min-height: 320px;   /* Hauteur naturelle minimale */
-    padding: 1.5rem 1.2rem; /* Donne de l’air vertical */
-    width: 100%;         /* Respecte la largeur calculée */
-    max-width: calc(50% - 60px); /* Empêche de dépasser la ligne */
+    max-width: calc(50% - 80px); /* largeur légèrement réduite */
+    min-height: 360px;           /* hauteur améliorée */
+    padding: 1.8rem 1.4rem;
     box-sizing: border-box;
 }
 
 .timeline .group img,
 .timeline .group .slideshow .slide {
-    max-height: 260px;   /* Encourage le contenu à occuper l’espace sans déborder */
-    object-fit: cover;
+    height: 300px;               /* image presque carrée */
+    max-height: 300px;
+    object-fit: cover;           /* meilleure occupation sans déformation */
 }
 
 /* Responsive mobile-------------------------------------------------------------- */
