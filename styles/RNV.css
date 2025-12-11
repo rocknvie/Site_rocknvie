@@ -848,4 +848,8 @@ font-size: 3rem;
   .listsinglemargin {
 	  margin-bottom:0px;
   }
+ .timeline .group {
+        max-width: 100%;
+        width: 100%;
+    }
 }
