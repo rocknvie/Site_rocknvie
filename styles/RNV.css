@@ -545,7 +545,10 @@ content: "";
   opacity: 1;
   transform: translateY(0);
 }
-
+.timeline .group {
+    max-width: calc(50% - 60px);
+    width: 100%;
+}
 /* Responsive mobile-------------------------------------------------------------- */
 @media screen and (max-width: 700px) {
   .group {
@@ -845,19 +848,4 @@ font-size: 3rem;
   .listsinglemargin {
 	  margin-bottom:0px;
   }
-}
-@media (min-width: 992px) and (max-width: 1600px) {
-    .timeline {
-        max-width: 1500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .timeline .year-block {
-        max-width: 1400px;
-    }
-
-    .timeline .group {
-        max-width: 900px;
-    }
 }
