@@ -707,6 +707,9 @@ content: "";
   .listsinglemargin {
 	  margin-bottom:50px;
   }
+  .discs .container {
+  max-width: 1600px;
+}
 /*--------------RESPONSIVE--------------*/  
 @media (max-width: 767.98px) {
   .milestone {
