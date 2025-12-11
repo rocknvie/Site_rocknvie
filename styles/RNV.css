@@ -846,3 +846,18 @@ font-size: 3rem;
 	  margin-bottom:0px;
   }
 }
+@media (min-width: 992px) and (max-width: 1600px) {
+    .timeline {
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .timeline .year-block {
+        max-width: 1400px;
+    }
+
+    .timeline .group {
+        max-width: 900px;
+    }
+}
