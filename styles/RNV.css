@@ -727,13 +727,18 @@ content: "";
   .discs .container {
   max-width: 1600px;
 }
+.home.homeindex {
+    margin-top: 90px; /* hauteur réelle du header */
+}
 /*--------------RESPONSIVE--------------*/  
 @media (max-width: 767.98px) {
   .milestone {
     flex-direction: column;
     align-items: center;
   }
-
+.home.homeindex {
+        margin-top: 120px;
+    }
   .milestone_icon {
     margin-right: 0;
     margin-bottom: 25px;
